@@ -1,15 +1,16 @@
 <script setup>
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
-import {useDark, useToggle} from "@vueuse/core";
+import { useDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-import { Sunny, Moon } from '@element-plus/icons-vue'
-
+import { Sunny, Moon } from "@element-plus/icons-vue";
 </script>
 
 <template>
-    <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+    <nav
+        class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50"
+    >
         <div class="flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
                 <button
@@ -46,13 +47,19 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                     </svg>
                     <span class="sr-only">Toggle sidebar</span>
                 </button>
-                <ResponsiveNavLink :href="route('admin.dashboard')" class="flex items-center justify-between mr-4">
+                <ResponsiveNavLink
+                    :href="route('admin.dashboard')"
+                    class="flex items-center justify-between mr-4"
+                >
                     <img
                         :src="`/images/logo.png`"
                         class="mr-3 h-8"
                         alt="Logo"
                     />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vue-Shop</span>
+                    <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                        >JKB Sample</span
+                    >
                 </ResponsiveNavLink>
                 <form action="#" method="GET" class="hidden md:block md:pl-2">
                     <label for="topbar-search" class="sr-only">Search</label>
@@ -91,19 +98,32 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                     class="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                 >
                     <span class="sr-only">Toggle search</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path clip-rule="evenodd" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                    <svg
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            clip-rule="evenodd"
+                            fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        ></path>
                     </svg>
                 </button>
-<!--                switch theme-->
+                <!--                switch theme-->
                 <el-switch
                     v-model="isDark"
                     class="mr-3"
                     :active-action-icon="Moon"
-                    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #427D9D"
+                    style="
+                        --el-switch-on-color: #13ce66;
+                        --el-switch-off-color: #427d9d;
+                    "
                     :inactive-action-icon="Sunny"
                 />
-<!--                end switch theme-->
+                <!--                end switch theme-->
                 <!-- Notifications -->
                 <button
                     type="button"
@@ -169,9 +189,11 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                     class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
                                 >
                                     New message from
-                                    <span class="font-semibold text-gray-900 dark:text-white"
-                                    >Bonnie Green</span
-                                    >: "Hey, what's up? All set for the presentation?"
+                                    <span
+                                        class="font-semibold text-gray-900 dark:text-white"
+                                        >Bonnie Green</span
+                                    >: "Hey, what's up? All set for the
+                                    presentation?"
                                 </div>
                                 <div
                                     class="text-xs font-medium text-primary-600 dark:text-primary-500"
@@ -210,12 +232,14 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 <div
                                     class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
-                    >Jese leos</span
-                    >
+                                    <span
+                                        class="font-semibold text-gray-900 dark:text-white"
+                                        >Jese leos</span
+                                    >
                                     and
-                                    <span class="font-medium text-gray-900 dark:text-white"
-                                    >5 others</span
+                                    <span
+                                        class="font-medium text-gray-900 dark:text-white"
+                                        >5 others</span
                                     >
                                     started following you.
                                 </div>
@@ -258,14 +282,17 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 <div
                                     class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
-                    >Joseph Mcfall</span
-                    >
-                                    and
-                                    <span class="font-medium text-gray-900 dark:text-white"
-                                    >141 others</span
+                                    <span
+                                        class="font-semibold text-gray-900 dark:text-white"
+                                        >Joseph Mcfall</span
                                     >
-                                    love your story. See it and view more stories.
+                                    and
+                                    <span
+                                        class="font-medium text-gray-900 dark:text-white"
+                                        >141 others</span
+                                    >
+                                    love your story. See it and view more
+                                    stories.
                                 </div>
                                 <div
                                     class="text-xs font-medium text-primary-600 dark:text-primary-500"
@@ -306,13 +333,14 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 <div
                                     class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
-                    >Leslie Livingston</span
-                    >
+                                    <span
+                                        class="font-semibold text-gray-900 dark:text-white"
+                                        >Leslie Livingston</span
+                                    >
                                     mentioned you in a comment:
                                     <span
                                         class="font-medium text-primary-600 dark:text-primary-500"
-                                    >@bonnie.green</span
+                                        >@bonnie.green</span
                                     >
                                     what do you say?
                                 </div>
@@ -353,11 +381,12 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 <div
                                     class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
-                    >Robert Brown</span
-                    >
-                                    posted a new video: Glassmorphism - learn how to implement
-                                    the new design trend.
+                                    <span
+                                        class="font-semibold text-gray-900 dark:text-white"
+                                        >Robert Brown</span
+                                    >
+                                    posted a new video: Glassmorphism - learn
+                                    how to implement the new design trend.
                                 </div>
                                 <div
                                     class="text-xs font-medium text-primary-600 dark:text-primary-500"
@@ -379,7 +408,9 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                <path
+                                    d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+                                ></path>
                                 <path
                                     fill-rule="evenodd"
                                     d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
@@ -390,18 +421,18 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                         </div>
                     </a>
                 </div>
-<!--                <button-->
-<!--                    @click="toggleDark()"-->
-<!--                    class="px-3 py-2 text-yellow-500 dark:text-white rounded-lg transition duration-300 ease-in-out"-->
-<!--                >-->
-<!--                    <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
-<!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />-->
-<!--                    </svg>-->
+                <!--                <button-->
+                <!--                    @click="toggleDark()"-->
+                <!--                    class="px-3 py-2 text-yellow-500 dark:text-white rounded-lg transition duration-300 ease-in-out"-->
+                <!--                >-->
+                <!--                    <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
+                <!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />-->
+                <!--                    </svg>-->
 
-<!--                    <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
-<!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />-->
-<!--                    </svg>-->
-<!--                </button>-->
+                <!--                    <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
+                <!--                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />-->
+                <!--                    </svg>-->
+                <!--                </button>-->
                 <!-- Apps -->
                 <button
                     type="button"
@@ -449,7 +480,9 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Sales</div>
+                            <div class="text-sm text-gray-900 dark:text-white">
+                                Sales
+                            </div>
                         </a>
                         <a
                             href="#"
@@ -466,7 +499,9 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Users</div>
+                            <div class="text-sm text-gray-900 dark:text-white">
+                                Users
+                            </div>
                         </a>
                         <a
                             href="#"
@@ -485,7 +520,9 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Inbox</div>
+                            <div class="text-sm text-gray-900 dark:text-white">
+                                Inbox
+                            </div>
                         </a>
                         <a
                             href="#"
@@ -540,7 +577,9 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path>
+                                <path
+                                    d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"
+                                ></path>
                                 <path
                                     fill-rule="evenodd"
                                     d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
@@ -641,13 +680,15 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                     id="dropdown"
                 >
                     <div class="py-3 px-4">
-              <span
-                  class="block text-sm font-semibold text-gray-900 dark:text-white"
-              > {{ $page.props.auth.user.name }}</span
-              >
+                        <span
+                            class="block text-sm font-semibold text-gray-900 dark:text-white"
+                        >
+                            {{ $page.props.auth.user.name }}</span
+                        >
                         <span
                             class="block text-sm text-gray-900 truncate dark:text-white"
-                        > {{ $page.props.auth.user.email }}</span
+                        >
+                            {{ $page.props.auth.user.email }}</span
                         >
                     </div>
                     <ul
@@ -658,14 +699,14 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                             <a
                                 href="#"
                                 class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                            >My profile</a
+                                >My profile</a
                             >
                         </li>
                         <li>
                             <a
                                 href="#"
                                 class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                            >Account settings</a
+                                >Account settings</a
                             >
                         </li>
                     </ul>
@@ -677,18 +718,18 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                             <a
                                 href="#"
                                 class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            ><svg
-                                class="mr-2 w-5 h-5 text-gray-400"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
+                                ><svg
+                                    class="mr-2 w-5 h-5 text-gray-400"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
                                 My likes</a
                             >
                         </li>
@@ -696,16 +737,16 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                             <a
                                 href="#"
                                 class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                            ><svg
-                                class="mr-2 w-5 h-5 text-gray-400"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
-                                ></path>
-                            </svg>
+                                ><svg
+                                    class="mr-2 w-5 h-5 text-gray-400"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+                                    ></path>
+                                </svg>
                                 Collections</a
                             >
                         </li>
@@ -714,22 +755,22 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                                 href="#"
                                 class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
-                  <span class="flex items-center">
-                    <svg
-                        aria-hidden="true"
-                        class="mr-2 w-5 h-5 text-primary-600 dark:text-primary-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                          fill-rule="evenodd"
-                          d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                          clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    Pro version
-                  </span>
+                                <span class="flex items-center">
+                                    <svg
+                                        aria-hidden="true"
+                                        class="mr-2 w-5 h-5 text-primary-600 dark:text-primary-500"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                    Pro version
+                                </span>
                                 <svg
                                     aria-hidden="true"
                                     class="w-5 h-5 text-gray-400"
@@ -751,7 +792,13 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
                         aria-labelledby="dropdown"
                     >
                         <li>
-                            <ResponsiveNavLink :href="route('logout')" method="post" as="button" class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                :href="route('logout')"
+                                method="post"
+                                as="button"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >Sign out</ResponsiveNavLink
+                            >
                         </li>
                     </ul>
                 </div>
@@ -759,5 +806,3 @@ import { Sunny, Moon } from '@element-plus/icons-vue'
         </div>
     </nav>
 </template>
-
-

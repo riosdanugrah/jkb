@@ -104,7 +104,7 @@ class CartController extends Controller
                     'originType' => 'city',
                     'destination' => $userAddress->prov_id,
                     'destinationType' => 'city',
-                    'weight' => '1700',
+                    'weight' => '500',
                     'courier' => 'jne',
                 ]);
 

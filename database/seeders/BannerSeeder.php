@@ -16,17 +16,17 @@ class BannerSeeder extends Seeder
         Banner::create([
             'name' => $name = 'banner 1',
             'slug'=>str($name)->slug(),
-            'image'=> 'https://images.unsplash.com/photo-1519638831568-d9897f54ed69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D'
+            'image'=> 'https://images.unsplash.com/photo-1606791405792-1004f1718d0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D'
         ]);
         Banner::create([
             'name' => $name = 'banner 2',
             'slug'=>str($name)->slug(),
-            'image' => 'https://images.unsplash.com/photo-1599139894727-62676829679b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGhlYWRwaG9uZXxlbnwwfHwwfHx8MA%3D%3D'
+            'image' => 'https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjN8fHxlbnwwfHx8fHw%3D'
         ]);
         Banner::create([
             'name' => $name = 'banner 3',
             'slug'=>str($name)->slug(),
-            'image' => 'https://images.unsplash.com/photo-1612832988915-703f0eb9e437?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxtb25pdG9yfGVufDB8fDB8fHww'
+            'image' => 'https://images.unsplash.com/photo-1493925410384-84f842e616fb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzR8fHxlbnwwfHx8fHw%3D'
         ]);
     }
 }
